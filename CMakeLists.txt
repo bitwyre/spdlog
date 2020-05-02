@@ -20,6 +20,8 @@ spdlog_extract_version()
 
 project(spdlog VERSION ${SPDLOG_VERSION} LANGUAGES CXX)
 message(STATUS "Build spdlog: ${SPDLOG_VERSION}")
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
 
 include(GNUInstallDirs)
 
